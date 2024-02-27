@@ -50,8 +50,8 @@ void HaDeckDevice::setup() {
 
     static lv_disp_drv_t disp_drv;
     lv_disp_drv_init(&disp_drv);
-    disp_drv.hor_res = TFT_WIDTH;
-    disp_drv.ver_res = TFT_HEIGHT;
+    disp_drv.hor_res = 320;
+    disp_drv.ver_res = 240;
     disp_drv.rotated = 1;
     disp_drv.sw_rotate = 1;
     disp_drv.flush_cb = flush_pixels;
