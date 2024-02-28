@@ -70,7 +70,7 @@ LGFX::LGFX(void)
     cfg.y_max = 479;
     cfg.pin_int = 7;
     cfg.bus_shared = true;
-    cfg.offset_rotation = 2;
+    cfg.offset_rotation = 0;
 
     cfg.i2c_port = 1;
     cfg.i2c_addr = 0x38;
