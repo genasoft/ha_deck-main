@@ -1,4 +1,5 @@
 #include "hd_device_sc01_plus.h"
+#include "LGFX.h"
 
 namespace esphome {
 namespace hd_device {
@@ -8,7 +9,6 @@ static lv_disp_draw_buf_t draw_buf;
 static lv_color_t *buf = (lv_color_t *)heap_caps_malloc(TFT_HEIGHT * 20 * sizeof(lv_color_t), MALLOC_CAP_DMA);
 
 LGFX lcd;
-lcd.init();
 
 lv_disp_t *indev_disp;
 lv_group_t *group;
@@ -43,6 +43,7 @@ void IRAM_ATTR touchpad_read(lv_indev_drv_t *indev_driver, lv_indev_data_t *data
 
 void HaDeckDevice::setup() {
     lv_init();
+    lcd.init();
     lv_theme_default_init(NULL, lv_color_hex(0xFFEB3B), lv_color_hex(0xFF7043), 1, LV_FONT_DEFAULT);
 
     lcd.init();
