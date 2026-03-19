@@ -1,6 +1,7 @@
 #pragma once
 
 #define LGFX_USE_V1
+#include "lovyan_patch.h"
 #include <LovyanGFX.hpp>
 #include <lgfx/v1/platforms/esp32/Bus_Parallel8.hpp>
 
