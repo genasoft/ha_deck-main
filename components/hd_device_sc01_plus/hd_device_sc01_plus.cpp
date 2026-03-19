@@ -8,6 +8,7 @@ static lv_disp_draw_buf_t draw_buf;
 static lv_color_t *buf = (lv_color_t *)heap_caps_malloc(TFT_HEIGHT * 20 * sizeof(lv_color_t), MALLOC_CAP_DMA);
 
 LGFX lcd;
+lcd.init();
 
 lv_disp_t *indev_disp;
 lv_group_t *group;
