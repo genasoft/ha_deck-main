@@ -5,26 +5,7 @@ namespace hd_device {
 
 LGFX::LGFX(void)
 {
-  {
-    auto cfg = _bus_instance.config();
-    cfg.freq_write = 20000000;
-    cfg.pin_wr = 47;
-    cfg.pin_rd = -1;
-    cfg.pin_rs = 0;
-
-    // LCD data interface, 8bit MCU (8080)
-    cfg.pin_d0 = 9;
-    cfg.pin_d1 = 46;
-    cfg.pin_d2 = 3;
-    cfg.pin_d3 = 8;
-    cfg.pin_d4 = 18;
-    cfg.pin_d5 = 17;
-    cfg.pin_d6 = 16;
-    cfg.pin_d7 = 15;
-
-    _bus_instance.config(cfg);
-    _panel_instance.setBus(&_bus_instance);
-  }
+  
 
   {
     auto cfg = _panel_instance.config();
